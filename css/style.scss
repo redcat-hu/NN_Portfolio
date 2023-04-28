@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+//////////////////////// VÁLTOZÓK
+$color_1: rgb(212, 0, 0);
+$side_nav_w: 70px;
+$max_w: 1500px;
+$tra1: .5s;
+
+//////////////////////// ALAP
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  --color_main_1: #cf0e10;
+  --bg_color: white;
+  --bg_color2: rgb(230, 230, 230);
+  --text_color: black;
+
+  scroll-behavior: smooth;
+  background-color: var(--bg_color2);
+  transition: background-color $tra1;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text_color);
+}
+.darkMode {
+  --bg_color: rgb(20, 20, 20);
+  --bg_color2: rgb(29, 29, 29);
+  --text_color: white;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text_color);
+}
+a:hover {
+  opacity: .8;
+}
+.f0 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.g0 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+}
+.b0 {
+  padding: 3rem 2rem;
+  min-height: 200px;
+}
+.box {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      position: absolute;
+      top: 3rem;
+      left: 3rem;
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+}
+
+//////////////////////// PRELOADER
+#pre_loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+  background: $color_1;
+  z-index: 1000000;
+  
+    img {
+      height: 50vh;
+    }
+}
+
+//////////////////////// HOME
+#home {
+    background-color: #a1a1a12c;
+}
+
+//////////////////////// WORK
+#work {
+background-color: #2b2b2b;
+align-items: flex-start;
+justify-content: flex-start;
+flex-wrap: wrap;
+padding-top: 120px;
+
+.eszkozok {
+  i {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
+        overflow: hidden;
+        width: 100%;
+      }
+    #myBtnContainer{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+      .filterDiv {
+        float: left;
+        background-color: $color_1;
+        color: #ffffff;
+        width: 100px;
+        line-height: 100px;
+        text-align: center;
+        margin: 2px;
+        display: none;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      
+      /* The "show" class is added to the filtered elements */
+      .show {
+        display: block;
+      }
+      
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 8px 8px 0 8px;
+        color: $color_1;
+        font-size: 3rem;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        :nth-child(2) {
+          font-size: .8rem;
+          padding: 5px;
+          text-transform: uppercase;
+        }
+      }
+      
+      /* Add a light grey background on mouse-over */
+      .btn:hover {
+        background-color: #ddd;
+      }
+      
+      /* Add a dark background to the active button */
+      .btn.active {
+        background-color: $color_1;
+        color: white;
+      }
+}
+
+//////////////////////// ABOUT
+#about {
+  img {border-radius: 50%;}
+}
+
+//////////////////////// CONTACT
+#contact {
+    background-color: var(--color_main_1);
+    flex-direction: row;
+    gap: 2rem;
+
+    h2 {color: var(--bg_color);}
+    .inner {
+      background-color: var(--bg_color);
+      padding: 2rem;
+      border-radius: 1rem;
+      flex-direction: column;
+      gap: 5px;
+    }
+}
+
+
+//////////////////////// SIDE NAVIGATION
+.sidenav {
+height: $side_nav_w;
+width: 100vh;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: var(--bg_color);
+transition: background-color $tra1;
+box-shadow: 0 0 1rem rgba(29, 29, 29, 0.25);
+overflow-x: hidden;
+overflow-y: hidden;
+text-transform:uppercase;
+transform: rotate(-90deg) translateX(-100%);
+transform-origin: left top;
+display: flex;
+justify-content:space-between;
+flex-direction: row-reverse;
+align-items: center;
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 1rem;
+}
+
+ul:nth-child(2) {
+  margin-left: 1rem;
+  color: var(--text_color);
+
+  #darkMode {
+    height: 30px;
+    animation: darkmode 5s infinite;
+    cursor: pointer;
+
+    img {
+      height: 100%;
+    }
+
+    @keyframes darkmode {
+      0% {transform: rotate(0deg);}
+      50% {transform: rotate(180deg);}
+      100% {transform: rotate(360deg);}
+    }
+  }
+  li:nth-child(2) {
+    transform: rotate(90deg);
+  }
+}
+
+a {
+    padding: 6px 8px 6px 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--text_color);
+    transition: color $tra1;
+    display: block;
+    }
+a:hover {
+    color: $color_1;
+    }
+}
+.logo {
+  background-color: pink;
+  height: $side_nav_w;
+  width: $side_nav_w;
+  transform: rotate(90deg);
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  a {
+    margin: 0; padding: 0;
+  }
+}
+
+.main {
+margin-left: $side_nav_w; /* Same as the width of the sidebar */
+max-width: $max_w;
+margin: 0 auto;
+padding-left: $side_nav_w;
+}
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  } 
+
+
+// FOOTER
+footer {
+  color: white;
+  background-image: linear-gradient(#262626, #1c1c1c);
+
+  .top {
+    justify-items: center;
+    a {color: white;}
+    div {
+      grid-column: span 4;
+      flex-direction: column;
+      gap: 5px;
+      b {text-transform: uppercase;}
+    }
+  }
+  .bottom {
+    background-color: #282828;
+    padding: 10px;
+    justify-content: space-between;
+  }
+}
+
+// SOCIAL FUNCTION
+.social {
+  gap: 5px;
+  font-size: 30px;
+}

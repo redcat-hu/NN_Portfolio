@@ -1,0 +1,16 @@
+[
+    {
+        "iso": "hu",
+        "lang": "magyar"
+        "menu": {
+            "home": "főoldal",
+            "work": "munkáim",
+            "about": "rólam",
+            "contact": "kapcsolat"
+        }
+    },
+    {
+        "iso": "en",
+        "lang": "english"
+    }
+]
