@@ -10,18 +10,18 @@
 </head>
 <body>
 <div id="pre_loader">
-    <img src="img/logo3.svg" alt="">
+    <img src="<?= $local[1] ?>img/logo3.svg" alt="">
 </div>
  <nav class="sidenav">
     <ul>
-        <li class="logo"><a href="#home"><img src="img/logo2.webp" alt="logo of webdesigner"></a></li>
+        <li class="logo"><a href="#home"><img src="<?= $local[1] ?>img/logo2.webp" alt="logo of webdesigner"></a></li>
         <li><a href="#home">Főoldal</a></li>
         <li><a href="#work">Munkáim</a></li>
         <li><a href="#about">Rólam</a></li>
         <li><a href="#contact">Kapcsolat</a></li>
     </ul> 
     <ul>
-        <li><img id="darkMode" src="img/moon-fill.svg" alt=""></i></li>
+        <li><img id="darkMode" src="<?= $local[1] ?>img/moon-fill.svg" alt=""></i></li>
         <li id="lang">HU</li>
     </ul>
 </nav>

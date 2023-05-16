@@ -297,9 +297,7 @@ padding-left: $side_nav_w;
 footer {
   color: white;
   background-image: linear-gradient(#262626, #1c1c1c);
-
-  .top {
-    justify-items: center;
+  justify-items: center;
     a {color: white;}
     div {
       grid-column: span 4;
@@ -307,12 +305,6 @@ footer {
       gap: 5px;
       b {text-transform: uppercase;}
     }
-  }
-  .bottom {
-    background-color: #282828;
-    padding: 10px;
-    justify-content: space-between;
-  }
 }
 
 // SOCIAL FUNCTION
