@@ -1,7 +1,8 @@
+// IMPORT
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-//////////////////////// VÁLTOZÓK
+//////////////////////// SASS VARIABLES
 $color_1: rgb(212, 0, 0);
 $side_nav_w: 70px;
 $max_w: 1500px;
@@ -73,6 +74,7 @@ a:hover {
 
 //////////////////////// PRELOADER
 #pre_loader {
+  display: none;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -279,7 +281,7 @@ a:hover {
   }
 }
 
-.main {
+main {
 margin-left: $side_nav_w; /* Same as the width of the sidebar */
 max-width: $max_w;
 margin: 0 auto;

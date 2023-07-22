@@ -1,0 +1,10 @@
+{
+    "iso": "en",
+    "title": "Norbert Németh (Web Developer)",
+    "menu": {
+        "home": "home",
+        "work": "work",
+        "about": "about",
+        "contact": "contact"
+    }
+}

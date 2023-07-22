@@ -1,10 +1,8 @@
 <?php 
-require_once "php/functions.php";
-require_once "php/cookies.php";
-require_once "php/back.php";
+require_once "src/php/modules/functions.php";
+require_once "src/php/modules/backend.php";
 
-// Base
-require_once "php/parts/begin.php";
-require_once "php/pages/home.php";
-require_once "php/parts/end.php";
+require_once "src/php/parts/begin.php";
+require_once "src/php/parts/main.php";
+require_once "src/php/parts/end.php";
 ?>

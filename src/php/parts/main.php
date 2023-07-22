@@ -1,9 +1,9 @@
-<div class="main">
+<main>
     <div id="home" class="box">
-        <h1>Németh Norbert (Frontend Webfejlesztő)</h1>
+        <h1><?= $langJSON["title"] ?></h1>
     </div>
     <div id="work" class="box">
-        <h2>Munkáim</h2>
+        <h2><?= $langJSON["title"]["menu"]["work"] ?></h2>
         <div id="myBtnContainer">
             <div class="btn active" onclick="filterSel('all')"> <i class="devicon-html5-plain"></i> <p>összes</p></div>
             <div class="btn" onclick="filterSel('css')"> <i class="devicon-sass-plain"></i> <p>css</p></div>
@@ -34,11 +34,11 @@
         </div>
     </div>
     <div id="about" class="box">
-        <h2>Rólam</h2>
+        <h2><?= $langJSON["title"]["menu"]["about"] ?></h2>
         <img src="./img/profile.webp" alt="">
     </div>
     <div id="contact" class="f0 box">
-        <h2>Kapcsolat</h2>
+        <h2><?= $langJSON["title"]["menu"]["contact"] ?></h2>
         <div class="inner f0 cleft">
             <h3>Németh Norbert</h3>
             <div><i class="bi bi-envelope-fill"></i> <a href="mailto:info@red-cat.hu">info@red-cat.hu</a></div>
@@ -57,4 +57,4 @@
                 <input type="submit" value="Küldés">
             </form>
         </div>
-    </div>
+</main>

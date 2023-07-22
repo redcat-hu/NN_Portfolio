@@ -21,10 +21,8 @@
 </div> 
 <div id="cookie"></div>
 
-<script>
-  var language = "<?= $language[0] ?>";
-  var php = ["<?= $local[0] ?>", "<?= $local[1] ?>", "<?= $local[2] ?>", <?= $local[3] ?>];
-</script>
+
+
 <script src="<?= $local[2] ?>js/cookie_2.js?v=<?= time() ?>"></script>
 <script src="js/main.js"></script>
 
